@@ -1,4 +1,4 @@
-#Aktienverwaltung API
+# Aktienverwaltung API
 Diese API wurde mit .NET entwickelt und dient zur Verwaltung von Aktieninformationen. Sie ermöglicht es Benutzern, Informationen über verschiedene Aktien abzurufen, neue Aktien hinzuzufügen, vorhandene zu aktualisieren oder zu löschen. Die API bietet Endpunkte für den Zugriff auf die Daten über HTTP-Methoden.
 
 ![image](https://github.com/user-attachments/assets/4469836f-b551-4dc4-bc95-644d5b8af324)
