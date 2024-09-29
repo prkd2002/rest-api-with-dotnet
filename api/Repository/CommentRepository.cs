@@ -41,6 +41,8 @@ namespace api.Repository
             return commentModel;
         }
 
+    
+
         public async Task<Comment?> RemoveCommentAsync(int id)
         {
             var commentModel = await _context.Comments.FirstOrDefaultAsync(com => com.Id == id);
@@ -59,7 +61,6 @@ namespace api.Repository
             }
             commentModel.Content = updateCommentRequest.Content;
             commentModel.Title = updateCommentRequest.Title;
-            commentModel.CreatedOn = updateCommentRequest.CreatedOn;
             await _context.SaveChangesAsync();
             return commentModel;
         }

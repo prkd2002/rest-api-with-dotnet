@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using api.Dtos.Comment;
 
 namespace api.Dtos.Stock
 {
@@ -9,17 +11,31 @@ namespace api.Dtos.Stock
     {
          public int Id { get; set; }
 
+        [Required]
+        [MaxLength(10, ErrorMessage ="The Symbol cannot be  over 10 Characters")]
         public string Symbol { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(10, ErrorMessage ="Company name cannot be over 10 Characters")]
         public string CompanyName { get; set; } = string.Empty;
       
+        [Required]
+        [Range(1 ,10000000000)]
          public decimal Purchase  { get; set; }
 
+        [Required]
+        [Range(0.001, 100)]
         public decimal LastDiv { get; set; }
 
+        [Required]
+        [MaxLength(10, ErrorMessage ="Industry cannot be over 10 Characters")]
         public string Industry { get; set; } = string.Empty;
 
+        [Required]
+        [Range(1, 500000000000)]
         public long MarketCap { get; set; }
+
+        public List<CommentDto>? Comments { get; set; }
 
         //Ich will keine Kommentare zurückgeben
         
